@@ -1,23 +1,22 @@
-
-<ion-content  [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content class="background" [fullscreen]="true">
+  <ion-header class="header" collapse="condense">
     <ion-toolbar>
       <ion-app>
-        <ion-menu contentId="main-content">
+        <ion-menu  contentId="main-content">
           <ion-header>
             <ion-toolbar color="tertiary">
               <ion-title>Menu Content</ion-title>
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding">This is the menu content.</ion-content>
-        </ion-menu>
+        </ion-menu >
         <div class="ion-page" id="main-content">
           <ion-header>
             <ion-toolbar>
               <ion-buttons slot="start">
                 <ion-menu-button color="warning"></ion-menu-button>
               </ion-buttons>
-              <ion-searchbar animated="true" placeholder="Pesquisar"></ion-searchbar>
+              <ion-searchbar animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
@@ -41,7 +40,9 @@
           <ion-card-content>
             Here's a small text description for the card content. Nothing more, nothing less.
           </ion-card-content>
-          <ion-button color="dark">Reserve</ion-button>
+          <div class="reservebtn">
+          <ion-button class="reservebtn" color="dark">Reserve</ion-button>
+          </div>
         </ion-card>
       </ion-item>
     </ion-list>
@@ -53,28 +54,36 @@
     </ion-content>
 
     <ion-footer [translucent]="true">
-      <ion-toolbar>
+      <ion-toolbar >
         <ion-tabs>
-          <ion-tab-bar slot="bottom">
-            <ion-tab-button tab="home">
-              <ion-icon name="play-circle"></ion-icon>
-              Listen Now
+          <ion-tab-bar color="dark" slot="bottom">
+           
+            <ion-tab-button color="warning" tab="home">
+              <ion-icon color="warning" name="play-circle"></ion-icon>
+              <ion-text color="warning">
+              Listen Now</ion-text>
             </ion-tab-button>
-            <ion-tab-button tab="radio">
-              <ion-icon name="radio"></ion-icon>
-              Radio
+            <ion-tab-button color="warning" tab="radio">
+              <ion-icon color="warning" name="radio"></ion-icon>
+              <ion-text color="warning">
+                Radio</ion-text>
+           
             </ion-tab-button>
-            <ion-tab-button tab="library">
-              <ion-icon name="library"></ion-icon>
-              Library
+            <ion-tab-button color="warning" tab="library">
+              <ion-icon color="warning" name="library"></ion-icon>
+              <ion-text color="warning">
+                Library</ion-text>
+         
             </ion-tab-button>
-            <ion-tab-button tab="search">
-              <ion-icon name="search"></ion-icon>
-              Search
+            <ion-tab-button color="warning" tab="search">
+              <ion-icon color="warning" name="search"></ion-icon>
+              <ion-text color="warning">
+                Search</ion-text>
+            
             </ion-tab-button>
+           
           </ion-tab-bar>
         </ion-tabs>
       </ion-toolbar>
     </ion-footer>
-
     
