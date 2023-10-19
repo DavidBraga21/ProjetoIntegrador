@@ -2,23 +2,16 @@
   <ion-header class="header" collapse="condense">
     <ion-toolbar>
       <ion-app>
-        <ion-menu  contentId="main-content">
-          <ion-header>
-            <ion-toolbar color="tertiary">
-              <ion-title>Menu Content</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">This is the menu content.</ion-content>
-        </ion-menu >
+    
         <div class="ion-page" id="main-content">
-          <ion-header>
+         
             <ion-toolbar>
               <ion-buttons slot="start">
                 <ion-menu-button color="warning"></ion-menu-button>
               </ion-buttons>
-              <ion-searchbar animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
+              <ion-searchbar class="pesquisa" animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
             </ion-toolbar>
-          </ion-header>
+         
           <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
         </div>
       </ion-app>
@@ -31,14 +24,27 @@
   <ion-list>
     <ion-list>
       <ion-item *ngFor="let item of items">
-        <ion-card color="warning">
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
-          <ion-card-header>
-            <ion-card-title>Card Title</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          </ion-card-header>               
+        <ion-card class="grad1">
+          <div class="imgCard">
+            <div class="container1">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="7"><ion-card-title color="light">Frontera</ion-card-title></ion-col>
+                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
+                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
+                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
+                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
+                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
+                </ion-row>
+                <ion-row><ion-col size="7"><ion-card-subtitle color="light">Barra da Tijuca</ion-card-subtitle></ion-col> </ion-row>
+              </ion-grid>
+              
+            
+            </div>
+          </div>
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            <ion-text color="light"> Here's a small text description for the card content. Nothing more, nothing less.</ion-text>
+           
           </ion-card-content>
           <div class="reservebtn">
           <ion-button class="reservebtn" color="dark">Reserve</ion-button>
@@ -53,37 +59,44 @@
   </ion-list>
     </ion-content>
 
-    <ion-footer [translucent]="true">
-      <ion-toolbar >
-        <ion-tabs>
-          <ion-tab-bar color="dark" slot="bottom">
+    <ion-footer class="footer" >
+     
+        <ion-tabs class="footer">
+          <ion-tab-bar class="tabBar" color="dark" slot="bottom">
            
-            <ion-tab-button color="warning" tab="home">
-              <ion-icon color="warning" name="play-circle"></ion-icon>
-              <ion-text color="warning">
-              Listen Now</ion-text>
+            <ion-tab-button  tab="home">
+              <ion-icon class="button" color="light" name="home"></ion-icon>
+              <ion-text >
+              Início</ion-text>
             </ion-tab-button>
             <ion-tab-button color="warning" tab="radio">
-              <ion-icon color="warning" name="radio"></ion-icon>
-              <ion-text color="warning">
-                Radio</ion-text>
+              <ion-icon class="button" name="heart"><ion-text color="warning">
+                Favoritos</ion-text></ion-icon>
+              <ion-text >
+                Favoritos</ion-text>
            
             </ion-tab-button>
-            <ion-tab-button color="warning" tab="library">
-              <ion-icon color="warning" name="library"></ion-icon>
-              <ion-text color="warning">
-                Library</ion-text>
+            <ion-tab-button  tab="library">
+              <ion-icon class="button"  name="map"></ion-icon>
+              <ion-text >
+                Mapa</ion-text>
          
             </ion-tab-button>
+            <ion-tab-button  tab="chatbubble-ellipses">
+              <ion-icon class="button"  name="chatbubble-ellipses"></ion-icon>
+              <ion-text>
+                Chat</ion-text>
+            
+            </ion-tab-button>
+            
             <ion-tab-button color="warning" tab="search">
-              <ion-icon color="warning" name="search"></ion-icon>
-              <ion-text color="warning">
-                Search</ion-text>
+              <ion-icon  class="button" name="person-circle"></ion-icon>
+              <ion-text >
+                Perfil</ion-text>
             
             </ion-tab-button>
            
           </ion-tab-bar>
         </ion-tabs>
-      </ion-toolbar>
+      
     </ion-footer>
-    
