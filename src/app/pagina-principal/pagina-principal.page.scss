@@ -11,7 +11,8 @@ ion-content.background{
   
   ion-header.header{margin-top: 3%;}
   
-  ion-searchbar{--width: 50%}
+  ion-searchbar{--width: 50%
+    box-shadow: 2px 2px 5px black;}
   
   ion-footer{
    
@@ -35,11 +36,14 @@ ion-content.background{
           
           padding: 5px;        
           width: 35px;
-          height: 35px;}
+          height: 35px;
+          ;
+        }
   
     .imgCard{
         background-image: url(https://www.guiadasemana.com.br/contentFiles/system/pictures/2013/4/74658/original/fronteira.jpg);
         height: 200px;
+        box-shadow: 0px 3px 5px black;
     }
   
     .container1{height: 200px;
@@ -47,7 +51,17 @@ ion-content.background{
     
   ;}
   
-  ion-card-title{
+  .imgBtn{
+    background-image: url(../../assets/img/Explorar.jpg);
+     background-size:cover;
+     border-radius: 10px;
+     box-shadow: 2px 2px 5px black;
+
+    }
+
+    
+
+    ion-card-title{
     font-size: 18px;
     padding-top: 14px ;
     padding-left: 15px;
@@ -66,8 +80,7 @@ ion-content.background{
   
   }
   
-  ion-search-bar.pesquisa{
-    box-shadow: 4px,4px}
+
 
 
      
