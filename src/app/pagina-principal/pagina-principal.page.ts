@@ -1,25 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
 @Component({
-  selector: 'app-pagina-principal',
-  templateUrl: './pagina-principal.page.html',
-  styleUrls: ['./pagina-principal.page.scss'],
+  selector: 'app-main-page',
+  templateUrl: './main-page.page.html',
+  styleUrls: ['./main-page.page.scss'],
 })
-export class PaginaPrincipalPage implements OnInit {
+export class MainPagePage {
 
-  items: any=[];
+  data: string[] = []; // Inicialize com um array vazio
+  limite: number = 50; // Defina o limite de itens a carregar
 
-  ngOnInit() {
-    this.generateItems();
+  constructor() {
+    this.loadData(null); // Carregue os primeiros dados
   }
 
-  private generateItems() {
-    ;
-    for (let i = 0; i < 50; i++) {
-      this.items.push(`Item ${i + 1}`);
-    }
-  }
+  loadData(event:any) {
+    // Simule uma requisição assíncrona para buscar mais dados
+    setTimeout(() => {
+      for (let i = 0; i < 10; i++) {
+        if (this.data.length < this.limite) {
+          this.data.push(`Item ${this.data.length + 1}`);
+        }
+      }
 
+      if (event) {
+        event.target.complete(); // Complete o evento de rolagem infinita
+      }
+
+      if (this.data.length >= this.limite) {
+        event.target.disabled = true; // Desabilite o evento quando o limite for atingido
+      }
+    }, 1000); // Tempo de simulação de requisição
+  }
 }
