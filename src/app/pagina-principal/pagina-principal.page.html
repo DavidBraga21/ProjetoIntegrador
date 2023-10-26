@@ -5,31 +5,52 @@
     
         <div class="ion-page" id="main-content">
          
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-menu-button color="warning"></ion-menu-button>
-              </ion-buttons>
-              <ion-searchbar class="pesquisa" animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
-            </ion-toolbar>
-         
-          <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
-        </div>
-      </ion-app>
-    </ion-toolbar>
-  </ion-header>
-  
-  <div class="container2">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+             
+            </ion-buttons>
+            <ion-searchbar class="pesquisa" animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
+          </ion-toolbar>
+       
+        <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+      </div>
+    </ion-app>
+  </ion-toolbar>
+</ion-header>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col size="6">     
-         <ion-button color="none" expand="block" class="imgBtn">Explorar<div class="shadow"></div></ion-button>      
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<div class="container2">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">     
+       <ion-button color="none" expand="block" class="imgBtnExplorar">Explorar<div class="shadow"></div></ion-button>      
+      </ion-col>
+
+      <ion-col size="1"></ion-col>
+
+      <ion-col size="4">     
+        <ion-button color="none" expand="block" class="imgBtnMaisProximos">Mais<br> Proximos<div class="shadow"></div></ion-button>      
+       </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="11">     
+       <ion-button color="none" expand="block" class="imgBtnRecomendados">Recomendados<div class="shadow"></div></ion-button>      
+      </ion-col>
+      
+      
+       
+
+    </ion-row>
+
+    
+  </ion-grid>
 
 
   </div>
+
+
+  <ion-text color="light" class="TituloPagina">Últimas Reservas</ion-text>
   
 
   <ion-list>
@@ -74,6 +95,13 @@
      
         <ion-tabs class="footer">
           <ion-tab-bar class="tabBar" color="dark" slot="bottom">
+
+            <ion-tab-button  tab="menu">
+              <ion-menu-button color="medium" class="button"></ion-menu-button>
+              <ion-text>
+                Menu</ion-text>
+            
+            </ion-tab-button>
            
             <ion-tab-button class="border" tab="home">
               <ion-icon class="button" color="warning" name="home"></ion-icon>
@@ -81,24 +109,18 @@
               Início</ion-text>
             </ion-tab-button>
             <ion-tab-button color="warning" tab="radio">
-              <ion-icon  name="heart"><ion-text color="warning">
-                Favoritos</ion-text></ion-icon>
+              <ion-icon color="medium" class="button" name="heart"></ion-icon>
               <ion-text >
                 Favoritos</ion-text>
            
             </ion-tab-button>
             <ion-tab-button  tab="library">
-              <ion-icon class="button"  name="map"></ion-icon>
+              <ion-icon color="medium"  class="button" name="map"></ion-icon>
               <ion-text >
                 Mapa</ion-text>
          
             </ion-tab-button>
-            <ion-tab-button  tab="chatbubble-ellipses">
-              <ion-icon class="button"  name="chatbubble-ellipses"></ion-icon>
-              <ion-text>
-                Chat</ion-text>
-            
-            </ion-tab-button>
+          
             
       
            
