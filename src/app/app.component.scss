@@ -1,121 +1,135 @@
-ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #0000));
-}
+ion-content.background{
+  --ion-background-color:#333332}
 
-ion-menu.md ion-content {
-  --padding-start: 8px;
-  --padding-end: 8px;
-  --padding-top: 20px;
-  --padding-bottom: 20px;
-}
-
-ion-menu.md ion-list {
-  padding: 20px 0;
-}
-
-ion-menu.md ion-note {
-  margin-bottom: 30px;
-}
-
-ion-menu.md ion-list-header,
-ion-menu.md ion-note {
-  padding-left: 10px;
-}
-
-ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
-}
-
-ion-menu.md ion-list#inbox-list ion-list-header {
-  font-size: 22px;
-  font-weight: 600;
-
-  min-height: 20px;
-}
-
-ion-menu.md ion-list#labels-list ion-list-header {
+ion-button.reservebtn{
+  margin-left: 40%;
+  padding-bottom: 20%;
+  height: 40px;
   font-size: 16px;
-
-  margin-bottom: 18px;
-
-  color: #757575;
-
-  min-height: 26px;
+  width: 150px;
 }
 
-ion-menu.md ion-item {
-  --padding-start: 10px;
-  --padding-end: 10px;
-  border-radius: 4px;
+ion-header.header{margin-top: 4%;}
+
+ion-searchbar{--width: 50%
+  box-shadow: 2px 2px 5px black;}
+
+ion-footer{
+ 
+  height: 90px;}
+
+ion-tab-bar{
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 50px;
+ 
+ 
+
 }
 
-ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+ion-card.grad1{
+  background: linear-gradient(rgba(241,75,55)55%,rgba(251,169,63));
 }
 
-ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+ion-icon.button{
+        
+        padding: 5px;        
+        width: 35px;
+        height: 35px;        
+        
+      }
+
+  .imgCard{
+      background-image: url(https://www.guiadasemana.com.br/contentFiles/system/pictures/2013/4/74658/original/fronteira.jpg);
+      height: 200px;
+      box-shadow: 0px 3px 5px black;
+  }
+
+  .container1{height: 200px;
+      background: linear-gradient(rgba(0,0,0,0.85),rgba(251,169,63,0));
+  
+;}
+
+.container2{
+
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+
+
+};
+
+.TituloPagina{
+  margin-top: 50%;
+  margin-left: 34%;
 }
 
-ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+.imgBtnExplorar{
+ 
+   background-size:cover;
+   border-radius: 10px;
+   box-shadow: 2px 2px 5px black;
+   height: 75px;
+   
+
+  }
+
+  .imgBtnRecomendados{
+  
+     background-size:cover;
+     border-radius: 10px;
+     box-shadow: 2px 2px 5px black;
+     height: 75px;
+     
+  
+    }
+
+    .imgBtnMaisProximos{
+    
+       background-size:cover;
+       border-radius: 10px;
+       box-shadow: 2px 2px 5px black;
+       height: 75px;
+       
+    
+      }
+
+      .imgBtnFavoritos{
+    
+         background-size:cover;
+         border-radius: 10px;
+         box-shadow: 2px 2px 5px black;
+         height: 75px;
+         
+      
+        }
+  
+
+
+  ion-card-title{
+  font-size: 18px;
+  padding-top: 14px ;
+  padding-left: 15px;
+  padding-bottom: 0px;
 }
 
-ion-menu.md ion-item ion-label {
-  font-weight: 500;
+ion-card-subtitle{
+  padding-left: 17px;
+  font-size: 9px;
 }
 
-ion-menu.ios ion-content {
-  --padding-bottom: 20px;
+ion-icon.star{
+  width: 15px;
+  height: 15px;
+  padding-top: 19px;
+
 }
 
-ion-menu.ios ion-list {
-  padding: 20px 0 0 0;
-}
 
-ion-menu.ios ion-note {
-  line-height: 24px;
-  margin-bottom: 20px;
-}
 
-ion-menu.ios ion-item {
-  --padding-start: 16px;
-  --padding-end: 16px;
-  --min-height: 50px;
-}
 
-ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
-}
+   
+ 
 
-ion-menu.ios ion-item ion-icon {
-  font-size: 24px;
-  color: #73849a;
-}
-
-ion-menu.ios ion-list#labels-list ion-list-header {
-  margin-bottom: 8px;
-}
-
-ion-menu.ios ion-list-header,
-ion-menu.ios ion-note {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-ion-menu.ios ion-note {
-  margin-bottom: 8px;
-}
-
-ion-note {
-  display: inline-block;
-  font-size: 16px;
-
-  color: var(--ion-color-medium-shade);
-}
-
-ion-item.selected {
-  --color: var(--ion-color-primary);
-}
-
-ion-content.background{--ion-background-color: #333332 }
+  
