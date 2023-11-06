@@ -7,13 +7,11 @@ import { InfiniteScrollCustomEvent } from '@ionic/angular';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'pagina', url: '/folder/pagina-principal', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Configurações', url: '/folder/pagina-principal', icon: 'cog' },
+    { title: 'Historico', url: '/folder/outbox', icon: 'receipt' },
+    { title: 'Sair', url: '/folder/favorites', icon: 'log-out' },
+ 
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [];
   constructor() {}
 }

@@ -2,18 +2,9 @@
   <ion-header class="header" collapse="condense">
     <ion-toolbar>
       <ion-app>
+  
+       <ion-searchbar class="pesquisa" animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
     
-        <div class="ion-page" id="main-content">
-         
-          <ion-toolbar>
-            <ion-buttons slot="start">
-             
-            </ion-buttons>
-            <ion-searchbar class="pesquisa" animated="true" color="medium" placeholder="Pesquisar"></ion-searchbar>
-          </ion-toolbar>
-       
-        <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
-      </div>
     </ion-app>
   </ion-toolbar>
 </ion-header>
@@ -23,19 +14,19 @@
   <ion-grid>
     <ion-row>
       <ion-col size="6">     
-       <ion-button color="none" expand="block" class="imgBtnExplorar">Explorar<div class="shadow"></div></ion-button>      
+       <ion-button href="/restaurantestipo" color="none" expand="block" class="imgBtnExplorar">Explorar<div class="shadow"></div></ion-button>      
       </ion-col>
 
       <ion-col size="1"></ion-col>
 
       <ion-col size="4">     
-        <ion-button color="none" expand="block" class="imgBtnMaisProximos">Mais<br> Proximos<div class="shadow"></div></ion-button>      
+        <ion-button color="none" expand="block" class="imgBtnMaisProximos">Novidades<div class="shadow"></div></ion-button>      
        </ion-col>
 
     </ion-row>
     <ion-row>
       <ion-col size="11">     
-       <ion-button color="none" expand="block" class="imgBtnRecomendados">Recomendados<div class="shadow"></div></ion-button>      
+       <ion-button color="none"  href="/recomendados" expand="block" class="imgBtnRecomendados">Recomendados<div class="shadow"></div></ion-button>      
       </ion-col>
       
       
@@ -54,41 +45,42 @@
   
 
   <ion-list>
-    <ion-list>
-      <ion-item *ngFor="let item of data">
-        <ion-card class="grad1">
-          <div class="imgCard">
-            <div class="container1">
-              <ion-grid>
-                <ion-row>
-                  <ion-col size="7"><ion-card-title color="light">Frontera</ion-card-title></ion-col>
-                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
-                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
-                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
-                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
-                  <ion-col><ion-icon color="light" class="star" name="star"></ion-icon></ion-col>
-                </ion-row>
-                <ion-row><ion-col size="7"><ion-card-subtitle color="light">Barra da Tijuca</ion-card-subtitle></ion-col> </ion-row>
-              </ion-grid>
-              
+  
+   
+      <ion-card *ngFor="let item of items" class="grad1">
+        <div class="imgCard" [style.background-image]="'url(' + item.imagem + ')'">
+          <div class="container1">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="7"><ion-card-title color="light">{{ item.nome }}</ion-card-title></ion-col>
+                <ion-col><ion-icon class="star" color="light" *ngFor="let star of getStars(item.nota)" name="star"></ion-icon></ion-col>
+                
+              </ion-row>
+              <ion-row><ion-col size="7"><ion-card-subtitle color="light">{{ item.bairro}}</ion-card-subtitle></ion-col> </ion-row>
+            </ion-grid>
             
-            </div>
+          
           </div>
-          <ion-card-content>
-            <ion-text  color="light"> Here's a small text description for the card content. Nothing more, nothing less.</ion-text>
-           
-          </ion-card-content>
-          <div class="reservebtn">
-          <ion-button class="reservebtn" color="dark">Reserve</ion-button>
-          </div>
-        </ion-card>
-      </ion-item>
-    </ion-list>
-    <ion-infinite-scroll  (ionInfinite)="loadData($event)" >
-      <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+        </div>
+        <ion-card-content>
+          <ion-text  color="light"> {{ item.descricao }}</ion-text>
+         
+        </ion-card-content>
+        <div class="reservebtn">
+        <ion-button class="reservebtn" color="dark">Reserve</ion-button>
+        </div>
+      </ion-card>
 
+      <ion-infinite-scroll (ionInfinite)="loadMoreData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="Carregando mais dados...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+  
   </ion-list>
+
+
     </ion-content>
 
     <ion-footer class="footer" >
@@ -108,13 +100,13 @@
               <ion-text >
               Início</ion-text>
             </ion-tab-button>
-            <ion-tab-button color="warning" tab="radio">
+            <ion-tab-button href="/favoritos" color="medium" >
               <ion-icon color="medium" class="button" name="heart"></ion-icon>
               <ion-text >
                 Favoritos</ion-text>
            
             </ion-tab-button>
-            <ion-tab-button  tab="library">
+            <ion-tab-button href="/mapa">
               <ion-icon color="medium"  class="button" name="map"></ion-icon>
               <ion-text >
                 Mapa</ion-text>
@@ -128,3 +120,4 @@
         </ion-tabs>
       
     </ion-footer>
+    
